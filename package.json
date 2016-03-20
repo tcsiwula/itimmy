@@ -1,16 +1,13 @@
 {
-  "name": "itimmy",
+  "name": "itimmy.com",
   "version": "0.2.0",
-  "description": "A sample Node.js app using Express 4",
+  "description": "my website",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "budo index.js --live"
   },
   "dependencies": {
     "express": "^4.13.3"
-  },
-  "engines": {
-    "iojs": "v3.3.1"
   },
   "repository": {
     "type": "git",
@@ -21,6 +18,11 @@
     "heroku",
     "express"
   ],
-  "author": "Tim Siwula",
-  "license": "MIT"
+  "author": "Tim Siwula <tcsiwula@usfca.edu> (http://itimmy.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "budo": "^8.1.0",
+    "express": "^4.13.4",
+    "watchify": "^3.7.0"
+  }
 }
