@@ -2,6 +2,6 @@
   "name": "itimmy.com",
   "description": "itimmy.com description",
   "repository": "https://github.com/tcsiwula/itimmy",
-  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "logo": "http://itimmy.com/node.svg",
   "keywords": ["iojs", "express", "static"]
 }

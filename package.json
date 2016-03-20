@@ -9,6 +9,9 @@
   "dependencies": {
     "express": "^4.13.3"
   },
+  "engines": {
+    "iojs": "3.3.1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/tcsiwula/itimmy.git"
