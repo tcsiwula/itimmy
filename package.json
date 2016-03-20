@@ -1,5 +1,5 @@
 {
-  "name": "node-js-sample",
+  "name": "itimmy",
   "version": "0.2.0",
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",
@@ -14,16 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-sample"
+    "url": "https://github.com/tcsiwula/itimmy.git"
   },
   "keywords": [
     "node",
     "heroku",
     "express"
   ],
-  "author": "Mark Pundsack",
-  "contributors": [
-    "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)"
-  ],
+  "author": "Tim Siwula",
   "license": "MIT"
 }
