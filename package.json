@@ -7,12 +7,21 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.13.4",
+    "express": "^4.13.3",
+    "express-generator": "^4.13.1",
+    "grunt-cli": "^1.1.0",
+    "gulp": "^3.9.1",
+    "node-sass": "^3.4.2",
+    "npm": "^3.8.3",
+    "open": "0.0.5",
+    "pg": "^4.5.1",
+    "pg-promise": "^3.4.1",
     "serve-index": "^1.7.3",
-    "serve-static": "^1.10.2"
+    "uglify-js": "^2.6.2"
   },
   "engines": {
-    "iojs": "3.3.1"
+    "iojs": "3.3.1",
+    "npm": "2.14.3"
   },
   "repository": {
     "type": "git",
