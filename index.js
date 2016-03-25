@@ -1,18 +1,31 @@
 var express = require('express')
 var serveIndex = require('serve-index');
-
-var app = express()
+var open = require('open');
+var app = express();
+var pgp = require('pg-promise')({
+    // Initialization Options
+});
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 app.use(serveIndex(__dirname + '/public'))
 
-app.listen(app.get('port'), function() {
-    console.log("Node app is running at localhost:" + app.get('port'))
-})
+app.listen(process.env.PORT || 5000, function()
+{
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+    open('http://127.0.0.1:5000');
+});
 
-// app.get('/', function(request, response) {
-//     response.send('itimmy.com is under constructions. Migrating to iojs 😀')
-//     document.body.style.backgroundColor = 'red'
-//     response.log("Node app is running at localhost:" + app.get('port'))
-// })
+
+
+// postgresql integration -- see http://expressjs.com/en/guide/database-integration.html
+var pgp = require("pg-promise")(/*options*/);
+var db = pgp("postgres://username:password@host:port/database");
+
+// db.one("SELECT $1 AS value", 123)
+//     .then(function (data) {
+//         console.log("DATA:", data.value);
+//     })
+//     .catch(function (error) {
+//         console.log("ERROR:", error);
+//     });
