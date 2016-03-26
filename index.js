@@ -10,6 +10,26 @@ app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 app.use(serveIndex(__dirname + '/public'))
 
+
+
+
+app.get('/', function(req,res){
+    res.send("Hello from /");
+})
+
+
+
+app.get('/about', function(req,res){
+    res.send("Hello from /about");
+})
+
+app.get('/resume', function(req,res){
+    res.send("Hello from /resume");
+})
+
+
+
+
 app.listen(process.env.PORT || 5000, function()
 {
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
