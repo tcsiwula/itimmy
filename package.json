@@ -11,6 +11,7 @@
     "express-generator": "^4.13.1",
     "grunt-cli": "^1.1.0",
     "gulp": "^3.9.1",
+    "http2": "^3.3.2",
     "node-sass": "^3.4.2",
     "npm": "^3.8.3",
     "open": "0.0.5",
