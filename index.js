@@ -29,12 +29,6 @@ app.get('/resume', function(req,res){
 })
 
 
-
-mkefhkdshk
-
-
-
-
 // var options = {
 //     key: fs.readFileSync('./example/localhost.key'),
 //     cert: fs.readFileSync('./example/localhost.crt')
