@@ -2,6 +2,8 @@ var express = require('express')
 var serveIndex = require('serve-index');
 var open = require('open');
 var app = express();
+var fs  = require('fs');
+
 var pgp = require('pg-promise')({
     // Initialization Options
 });
@@ -20,12 +22,13 @@ app.get('/about', function(req,res){
 })
 
 app.get('/resume', function(req,res){
-    res.send("Hello from /resume. The current time is: ", current_hour);
-})
+    res.writeHead(301, {"Location": "http://itimmy.com/resume.pdf"});
+    res.end();
+});
 
 
 app.get('/github', function(req,res){
-    res.writeHead(301, {"Location": " https://github.com/tcsiwula"});
+    res.writeHead(301, {"Location": "https://github.com/tcsiwula"});
     res.end();
 })
 
