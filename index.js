@@ -34,7 +34,6 @@ app.post('/resume', function(req,res){
 
 })
 
-// did it work?
 app.post('/resume2', function(req, res, next) {
     var path = __dirname + '/public';
     var stream = fs.readStream(path);
