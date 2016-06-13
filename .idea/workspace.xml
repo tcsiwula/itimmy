@@ -2,38 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb73cd81-6607-45fb-b297-a3786cf1d74d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/itimmy.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/HISTORY.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/example/client.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/example/localhost.crt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/example/localhost.key" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/example/server.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/lib/http.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/lib/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/lib/protocol/compressor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/lib/protocol/connection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/lib/protocol/endpoint.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/lib/protocol/flow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/lib/protocol/framer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/lib/protocol/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/lib/protocol/stream.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/test/compressor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/test/connection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/test/endpoint.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/test/flow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/test/framer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/test/http.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/test/stream.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/http2/test/util.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="itimmy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -378,7 +348,7 @@
       <workItem from="1461337750582" duration="2000" />
       <workItem from="1465338557039" duration="2652000" />
       <workItem from="1465680377110" duration="6781000" />
-      <workItem from="1465784922934" duration="1018000" />
+      <workItem from="1465784922934" duration="1819000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1458465373774</created>
@@ -552,7 +522,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35480000" />
+    <option name="totallyTimeSpent" value="36281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="720" height="823" extended-state="0" />
