@@ -59,6 +59,13 @@ app.get('/linkedin', function(req,res){
     res.end();
 })
 
+
+app.get('/twitter', function(req,res){
+    res.writeHead(301, {"Location": "https://twitter.com/tcsiwula"});
+    res.end();
+})
+
+
 app.get('/b', function(req,res){
     res.send("Hello from /redume. The current time is: ", current_hour);
 })
