@@ -66,20 +66,26 @@ app.get('/twitter', function(req,res){
 })
 
 
-app.get('/b', function(req,res){
-    res.send("Hello from /redume. The current time is: ", current_hour);
+app.get('/angellist', function(req,res){
+    res.writeHead(301, {"Location": "https://angel.co/tcsiwula"});
+    res.end();
 })
 
+
+app.get('/a', function(req,res){
+    res.writeHead(301, {"Location": "https://twitter.com/tcsiwula"});
+    res.end();
+})
+
+app.get('/b', function(req,res){
+    res.writeHead(301, {"Location": "https://twitter.com/tcsiwula"});
+    res.end();
+})
 
 app.get('/c', function(req,res){
-    res.send("Hello from /redume. The current time is: ", current_hour);
+    res.writeHead(301, {"Location": "https://twitter.com/tcsiwula"});
+    res.end();
 })
-
-
-app.get('/d', function(req,res){
-    res.send("Hello from /redume. The current time is: ", current_hour);
-})
-
 
 
 
