@@ -3,16 +3,21 @@ var serveIndex = require('serve-index');
 var open = require('open');
 var app = express();
 var fs  = require('fs');
-
+var path = require('path')
 var pgp = require('pg-promise')({
     // Initialization Options
 });
 var date = new Date();
 var current_hour = date.getHours();
+
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 app.use(serveIndex(__dirname + '/public'))
 app.use(serveIndex(__dirname + '/revive'))
+
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 
 app.get('/', function(req,res){
@@ -72,6 +77,22 @@ app.get('/angellist', function(req,res){
 })
 
 
+app.get('/projects/interactive_java_shell', function(req,res){
+    res.writeHead(301, {"Location": "https://github.com/tcsiwula/interactive_java_shell"});
+    res.end();
+})
+
+app.get('/project2', function(req,res){
+    res.writeHead(301, {"Location": "https://twitter.com/tcsiwula"});
+    res.end();
+})
+
+app.get('/project3', function(req,res){
+    res.writeHead(301, {"Location": "https://twitter.com/tcsiwula"});
+    res.end();
+})
+
+
 app.get('/a', function(req,res){
     res.writeHead(301, {"Location": "https://twitter.com/tcsiwula"});
     res.end();
@@ -86,8 +107,6 @@ app.get('/c', function(req,res){
     res.writeHead(301, {"Location": "https://twitter.com/tcsiwula"});
     res.end();
 })
-
-
 
 
 
