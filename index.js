@@ -77,7 +77,7 @@ app.get('/angellist', function(req,res){
 })
 
 
-app.get('/projects/interactive_java_shell', function(req,res){
+app.get('/projects/java-shell', function(req,res){
     res.writeHead(301, {"Location": "https://github.com/tcsiwula/interactive_java_shell"});
     res.end();
 })
