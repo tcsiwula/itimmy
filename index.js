@@ -3,13 +3,14 @@ var serveIndex = require('serve-index');
 var open = require('open');
 var app = express();
 var fs  = require('fs');
-var path = require('path')
+var path = require('path');
+var lame = require('lame');
+var Speaker = require('speaker');
 var pgp = require('pg-promise')({
     // Initialization Options
 });
 var date = new Date();
 var current_hour = date.getHours();
-
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 app.use(serveIndex(__dirname + '/public'))
@@ -17,6 +18,16 @@ app.use(serveIndex(__dirname + '/revive'))
 
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.static('public'));
+
+
+
+
+
+
+//play.sound('/public/audio/erikSatieNumberThree.mp3');
+
 
 
 
@@ -38,6 +49,8 @@ app.post('/resume', function(req,res){
     res.end();
 
 })
+
+
 
 app.post('/resume2', function(req, res, next) {
     var path = __dirname + '/public';
@@ -119,6 +132,12 @@ app.get('/c', function(req,res){
 //
 // require('http2').createServer(options, app).listen(8080);
 
+
+fs.createReadStream("public/audio/erikSatieNumberThree.mp3")
+    .pipe(new lame.Decoder())
+    .on('format', function (format) {
+        this.pipe(new Speaker(format));
+    });
 
 
 
