@@ -9,7 +9,7 @@
 **/.idea/tasks.xml
 .idea/vcs.xml
 
-
+node_modules*
 bower_components/*
 
 .idea*
