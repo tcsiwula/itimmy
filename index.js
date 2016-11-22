@@ -12,7 +12,7 @@ var pgp = require('pg-promise')({
 
 var date = new Date();
 var current_hour = date.getHours();
-app.set('port', (process.env.PORT || 5000))
+//app.set('port', (process.env.PORT || 5000))
 // app.use(express.static(__dirname + '/public'))
 app.use(serveIndex('/public'));
 //app.use(serveIndex(__dirname + '/revive'))
