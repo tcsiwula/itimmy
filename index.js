@@ -4,8 +4,8 @@ var open = require('open');
 var app = express();
 var fs = require('fs');
 var path = require('path');
-var lame = require('lame');
-var Speaker = require('speaker');
+//var lame = require('lame');
+//var Speaker = require('speaker');
 var pgp = require('pg-promise')({
     // Initialization Options
 });
@@ -88,11 +88,11 @@ app.get('/c', function (req, res) {
 })
 
 // play mp3 file
-fs.createReadStream("public/audio/erikSatieNumberThree.mp3")
-    .pipe(new lame.Decoder())
-    .on('format', function (format) {
-        this.pipe(new Speaker(format));
-    });
+// fs.createReadStream("public/audio/erikSatieNumberThree.mp3")
+//     .pipe(new lame.Decoder())
+//     .on('format', function (format) {
+//         this.pipe(new Speaker(format));
+//     });
 
 app.listen(process.env.PORT || 5000, function () {
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
