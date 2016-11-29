@@ -3,52 +3,134 @@
 
 
 <head>
-
+    <title>Tim Siwula's website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <style>
-        body{background: lightskyblue; font-family: Times; color: #2b2d2f}
+        body{background: black; font-family: Times; color: greenyellow}
     </style>
-
-    <!--<meta charset="utf-8">-->
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
-    <!--<meta name="description" content="">-->
-    <!--<meta name="author" content="">-->
-    <!--<link rel="icon" href="../../favicon.ico">-->
-
-
-    <!--&lt;!&ndash; Bootstrap core CSS &ndash;&gt;-->
-    <!--<link href="../css/bootstrap.min.css" rel="stylesheet">-->
-
-    <!--&lt;!&ndash; Custom styles for this template &ndash;&gt;-->
-    <!--<link href="album.css" rel="stylesheet">-->
 </head>
 
 
 <body>
+<script src="build/three.js"></script>
+
+<script src="js/renderers/Projector.js"></script>
+<script src="js/renderers/CanvasRenderer.js"></script>
+
+<script src="js/libs/stats.min.js"></script>
+
+
+
+
+
 <h1>itimmy.com is under construction. 401 redirects still good baby. </h1>
+
+
+
+
+
+
+<script>
+    var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
+    var container, stats;
+    var camera, scene, renderer;
+    var particles, particle, count = 0;
+    var mouseX = 0, mouseY = 0;
+    var windowHalfX = window.innerWidth / 2;
+    var windowHalfY = window.innerHeight / 2;
+    init();
+    animate();
+    function init() {
+        container = document.createElement( 'div' );
+        document.body.appendChild( container );
+        camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+        camera.position.z = 1000;
+        scene = new THREE.Scene();
+        particles = new Array();
+        var PI2 = Math.PI * 2;
+        var material = new THREE.SpriteCanvasMaterial( {
+            color: 0xffffff,
+            program: function ( context ) {
+                context.beginPath();
+                context.arc( 0, 0, 0.5, 0, PI2, true );
+                context.fill();
+            }
+        } );
+        var i = 0;
+        for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+            for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+                particle = particles[ i ++ ] = new THREE.Sprite( material );
+                particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 );
+                particle.position.z = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 );
+                scene.add( particle );
+            }
+        }
+        renderer = new THREE.CanvasRenderer();
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        container.appendChild( renderer.domElement );
+        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+        document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+        document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+        //
+        window.addEventListener( 'resize', onWindowResize, false );
+    }
+    function onWindowResize() {
+        windowHalfX = window.innerWidth / 2;
+        windowHalfY = window.innerHeight / 2;
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+    }
+    //
+    function onDocumentMouseMove( event ) {
+        mouseX = event.clientX - windowHalfX;
+        mouseY = event.clientY - windowHalfY;
+    }
+    function onDocumentTouchStart( event ) {
+        if ( event.touches.length === 1 ) {
+            event.preventDefault();
+            mouseX = event.touches[ 0 ].pageX - windowHalfX;
+            mouseY = event.touches[ 0 ].pageY - windowHalfY;
+        }
+    }
+    function onDocumentTouchMove( event ) {
+        if ( event.touches.length === 1 ) {
+            event.preventDefault();
+            mouseX = event.touches[ 0 ].pageX - windowHalfX;
+            mouseY = event.touches[ 0 ].pageY - windowHalfY;
+        }
+    }
+    //
+    function animate() {
+        requestAnimationFrame( animate );
+        render();
+    }
+    function render() {
+        camera.position.x += ( mouseX - camera.position.x ) * .05;
+        camera.position.y += ( - mouseY - camera.position.y ) * .05;
+        camera.lookAt( scene.position );
+        var i = 0;
+        for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+            for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+                particle = particles[ i++ ];
+                particle.position.y = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
+                        ( Math.sin( ( iy + count ) * 0.5 ) * 50 );
+                particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 4 +
+                        ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;
+            }
+        }
+        renderer.render( scene, camera );
+        count += 0.1;
+    }
+</script>
+
 
 </body>
 
-
-
-<footer class="text-muted">
+<footer>
 
 </footer>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-<script src="../../assets/js/vendor/holder.min.js"></script>
-<script>
-    $(function () {
-        Holder.addTheme("thumb", { background: "#55595c", foreground: "#eceeef", text: "Thumbnail" });
-    });
-</script>
-<script src="../../dist/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-</body>
 </html>
