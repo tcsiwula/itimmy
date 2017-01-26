@@ -50,6 +50,17 @@ app.get('/angellist', function (req, res) {
     res.end();
 })
 
+app.get('/p1', function (req, res) {
+    res.writeHead(301, {"Location": "https://github.com/tcsiwula/click_prediction"});
+    res.end();
+})
+
+app.get('/p2', function (req, res) {
+    res.writeHead(301, {"Location": "https://github.com/tcsiwula/search_engine"});
+    res.end();
+})
+
+
 app.get('/projects/java-shell', function (req, res) {
     res.writeHead(301, {"Location": "https://github.com/tcsiwula/interactive_java_shell"});
     res.end();
