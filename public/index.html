@@ -8,7 +8,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <style>
         body{background: black; font-family: Times; color: greenyellow}
+        h1{background: black; font-family: Times; color: red}
+        h2{background: black; font-family: Times; color: greenyellow}
         h3{background: black; font-family: Times; color: greenyellow}
+        ul{color:white; background-color:transparent; text-decoration:none}
         a:link{color:white; background-color:transparent; text-decoration:none}
         a:hover{color:red; background-color:transparent; text-decoration:underline}
         a:visited {color:white; background-color:transparent; text-decoration:none}
@@ -21,19 +24,26 @@
 <script src="js/renderers/CanvasRenderer.js"></script>
 <script src="js/libs/stats.min.js"></script>
 
-<h3>itimmy.com is under construction. 301 redirects still good baby. </h3>
-
+<h1>itimmy.com is under construction. 301 redirects still good baby! </h1>
+<hr>
+<h2>Current Projects</h2>
+<p><a href="https://HappyCha.in">HappyCha.in</a></p>
+<p><a href="http://youtalky.com">YouTalky.com</a></p>
+<p><a href="http://tinyflights.com">TinyFlights.com</a></p>
+<p><a href="sms://+17203364682">SMS Chatbot</a></p>
+<p><a href="http://howdoiprogram.com">HowDoIProgram.com</a></p>
+<hr>
+<h2>Community profiles</h2>
 <ul>
     <!--<li><a href="http://itimmy.com">Portfolio</a></li>-->
+    <li><a href="http://itimmy.com/resume.pdf">Resume.pdf</a></li>
     <li><a href="http://github.com/tcsiwula">Github</a></li>
-    <li><a href="http://itimmy.com/resume.pdf">Resume</a></li>
     <li><a href="http://linkedin.com/in/tcsiwula">Linkedin</a></li>
-    <li><a href="http://twitter.com/tcsiwula">Twitter</a></li>
     <li><a href="https://angel.co/tcsiwula">AngelList</a></li>
-
+    <li><a href="http://twitter.com/tcsiwula">Twitter</a></li>
 </ul>
-
-
+<hr>
+<p>Thank you for visiting :) </p>
 
 <script>
     var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
@@ -150,7 +160,7 @@
                 particle = particles[ i++ ];
 
                 particle.position.y = (
-                -Math.sin(
+                 -Math.sin(
 
                     // speed --> slow == ( ix + count ) * 0.1 )
                     // speed --> fast == ( ix + count ) * 0.5 )
