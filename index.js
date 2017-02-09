@@ -91,6 +91,15 @@ app.get('/c', function (req, res) {
     res.end();
 })
 
+app.get('/chatbot', function (req, res) {
+    res.send("Hello from /. The current time is: ", current_hour);
+})
+
+
+
+
+
+
 app.listen(process.env.PORT || 5000, function () {
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
     console.log("date = ", date);
