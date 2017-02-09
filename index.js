@@ -75,6 +75,11 @@ app.get('/messenger_chatbot', (req, res) => {
     res.end();
 });
 
+app.get('/chatbot', (req, res) => {
+    res.writeHead(301, {"Location": "https://www.facebook.com/Comedy-Bot-144000482774878/"});
+    res.end();
+});
+
 /* Handling all messenges */
 app.post('/messenger_chatbot', (req, res) => {
     res.writeHead(301, {"Location": "https://rocky-journey-79030.herokuapp.com/messenger_chatbot/"});
