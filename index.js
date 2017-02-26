@@ -1,5 +1,5 @@
 'use strict';
-var express = require('express')
+var express = require('express');
 var serveIndex = require('serve-index');
 var open = require('open');
 var app = express();
@@ -7,6 +7,8 @@ var fs = require('fs');
 var path = require('path');
 const bodyParser = require('body-parser');
 const request = require('request');
+const cheerio = require('cheerio');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -109,3 +111,10 @@ function sendMessage(event) {
     }
   });
 }
+
+
+app.get('/scrape', function(req, res){
+
+    //All the web scraping magic will happen here
+
+})
