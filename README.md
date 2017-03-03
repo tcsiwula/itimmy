@@ -1,8 +1,6 @@
 # itimmy
 itimmy-site
 
-
-
 #deploy to heroku
 ```sh
 $ git push heroku master
@@ -14,3 +12,5 @@ $ git add .
 $ git commit -m "update"
 $ git push origin master
 ```
+
+
