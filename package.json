@@ -35,12 +35,7 @@
     "type": "git",
     "url": "https://github.com/tcsiwula/itimmy.git"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "author": "Tim Siwula <tcsiwula@usfca.edu> (http://www.itimmy.com)",
+  "author": "Tim Siwula <tcsiwula@gmail.com> (http://www.itimmy.com)",
   "license": "MIT",
   "devDependencies": {
     "budo": "^9.4.7",

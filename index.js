@@ -14,7 +14,6 @@ var date = new Date();
 var current_hour = date.getHours();
 app.use(serveIndex('/public'));
 app.use(express.static('public'));
-const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
 app.get('/', function (req, res) {
     res.send("Hello from /. The current time is: ", current_hour);
