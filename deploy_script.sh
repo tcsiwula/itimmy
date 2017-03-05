@@ -7,6 +7,8 @@ echo "-----> deploying to github ---->"
 
 git status
 git add .
+git status
+
 git commit -m ":fireworks: updated readme"
 git push origin master
 
