@@ -5,7 +5,7 @@
 <head>
     <title>Tim Siwula's website</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <style>
         * {
             background: black;
@@ -59,6 +59,8 @@
             text-decoration: none
         }
     </style>
+    <h2>itimmy.com is under construction. 301 redirects still good baby! </h2>
+    <h3>Current Projects</h3>
 </head>
 
 <body>
@@ -66,9 +68,6 @@
 <script src="js/renderers/Projector.js"></script>
 <script src="js/renderers/CanvasRenderer.js"></script>
 <script src="js/libs/stats.min.js"></script>
-<h2>itimmy.com is under construction. 301 redirects still good baby! </h2>
-<h3>Current Projects</h3>
-
 <ul>
     <li><a href="https://HappyCha.in">HappyCha.in </a> -- Blockchain 2.0 (Ethereum) based Infrastructure as an API.
     <li><a href="http://m.me/144000482774878">Comedy Bot</a> -- Facebook Messenger Chatbot.
@@ -128,7 +127,6 @@
         document.addEventListener('mousemove', onDocumentMouseMove, true);
         document.addEventListener('touchstart', onDocumentTouchStart, true);
         document.addEventListener('touchmove', onDocumentTouchMove, true);
-        //
         window.addEventListener('resize', onWindowResize, false);
     }
     function onWindowResize() {
@@ -180,7 +178,7 @@
             }
         }
         renderer.render(scene, camera);
-        count += 0.4;
+        count += 0.1;
     }
 </script>
 
