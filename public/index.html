@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.0">
     <style>
         * {
-            overflow: auto;
             background: black;
             margin: 0;
             padding: 0;
+            -webkit-overflow-scrolling: touch;
+            overflow-y: scroll;
         }
 
         header {
@@ -93,7 +94,7 @@
     function init() {
         container = document.createElement('div');
         document.body.appendChild(container);
-        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 2, 10000);
         camera.position.z = 1000;
         scene = new THREE.Scene();
         particles = new Array();
@@ -124,9 +125,9 @@
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(window.innerWidth, window.innerHeight);
         container.appendChild(renderer.domElement);
-        document.addEventListener('mousemove', onDocumentMouseMove, false);
-        document.addEventListener('touchstart', onDocumentTouchStart, false);
-        document.addEventListener('touchmove', onDocumentTouchMove, false);
+        document.addEventListener('mousemove', onDocumentMouseMove, true);
+        document.addEventListener('touchstart', onDocumentTouchStart, true);
+        document.addEventListener('touchmove', onDocumentTouchMove, true);
         //
         window.addEventListener('resize', onWindowResize, false);
     }
