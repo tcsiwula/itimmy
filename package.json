@@ -7,25 +7,25 @@
     "start": "nodemon index.js"
   },
   "dependencies": {
-    "body-parser": "^1.16.0",
+    "body-parser": "^1.17.0",
     "bower": "^1.8.0",
     "cheerio": "^0.22.0",
     "express": "4.14.0",
-    "express-generator": "^4.13.1",
+    "express-generator": "^4.14.1",
     "fs": "0.0.1-security",
     "grunt-cli": "^1.2.0",
     "gulp": "^3.9.1",
-    "http2": "^3.3.2",
+    "http2": "^3.3.6",
     "lame": "^1.2.4",
-    "node-sass": "^3.4.2",
+    "node-sass": "^4.5.0",
     "nodemon": "^1.11.0",
-    "npm": "^3.8.3",
+    "npm": "^4.3.0",
     "open": "0.0.5",
-    "pg": "^4.5.1",
-    "pg-promise": "^3.4.1",
-    "request": "^2.79.0",
-    "serve-index": "^1.7.3",
-    "uglify-js": "^2.6.2"
+    "pg": "^6.1.2",
+    "pg-promise": "^5.6.2",
+    "request": "^2.80.0",
+    "serve-index": "^1.8.0",
+    "uglify-js": "^2.8.6"
   },
   "engines": {
     "node": "~7.1.0",
@@ -43,8 +43,8 @@
   "author": "Tim Siwula <tcsiwula@usfca.edu> (http://www.itimmy.com)",
   "license": "MIT",
   "devDependencies": {
-    "budo": "^8.1.0",
-    "express": "^4.13.4",
-    "watchify": "^3.7.0"
+    "budo": "^9.4.7",
+    "express": "^4.15.0",
+    "watchify": "^3.9.0"
   }
 }
