@@ -31,11 +31,6 @@ app.get('/tenx', function (req, res) {
   res.end();
 })
 
-app.get('/m', function (req, res) {
-  res.writeHead(301, {"Location": "https://www.youtube.com/playlist?list=PLMVXM3ivA2wAGEiEnbaWky3XQKT5w91d8"});
-  res.end();
-})
-
 app.post('/resume', function (req, res) {
   res.writeHead(301, {"Location": "http://itimmy.com/resume.pdf"});
   res.end();
