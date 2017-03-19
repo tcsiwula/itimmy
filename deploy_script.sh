@@ -5,7 +5,10 @@
 echo "-----> starting ... ---->"
 echo "-----> deploying to github ---->"
 
+git status
 git add .
+git status
+
 git commit -m ":fireworks: updated readme"
 git push origin master
 
@@ -16,6 +19,8 @@ echo "-----> deploying to heroku ---->"
 
 git push heroku master
 
-
 echo "+++++>   complete   <+++++"
+
+git status
+
 echo "<----- deploy script done <----"

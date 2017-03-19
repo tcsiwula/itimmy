@@ -7,15 +7,60 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <style>
-        body{background: black; font-family: Times; color: greenyellow}
-        h1{background: black; font-family: Times; color: red}
-        h2{background: black; font-family: Times; color: greenyellow}
-        h3{background: black; font-family: Times; color: greenyellow}
-        ul{color:white; background-color:transparent; text-decoration:none}
-        a:link{color:white; background-color:transparent; text-decoration:none}
-        a:hover{color:red; background-color:transparent; text-decoration:underline}
-        a:visited {color:white; background-color:transparent; text-decoration:none}
+        * {
+            background: black;
+            margin: 0;
+            padding: 0;
+            -webkit-overflow-scrolling: touch;
+            overflow-y: scroll;
+        }
+
+        header {
+            font-family: Times;
+            color: greenyellow
+        }
+
+        body {
+            font-family: Times;
+            color: greenyellow
+        }
+
+        footer {
+            background: black;
+            font-family: Times;
+            color: greenyellow
+        }
+
+        h2 {
+            font-family: Times;
+            color: red;
+        }
+
+        h3 {
+            font-family: Times;
+            color: greenyellow
+        }
+
+        a:link {
+            color: blue;
+            background-color: transparent;
+            text-decoration: none
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline
+        }
+
+        a:visited {
+            color: white;
+            background-color: transparent;
+            text-decoration: none
+        }
     </style>
+    <h2>itimmy.com is under construction. 301 redirects still good baby! </h2>
+    <h3>Current Projects</h3>
 </head>
 
 <body>
@@ -23,28 +68,17 @@
 <script src="js/renderers/Projector.js"></script>
 <script src="js/renderers/CanvasRenderer.js"></script>
 <script src="js/libs/stats.min.js"></script>
-
-<h1>itimmy.com is under construction. 301 redirects still good baby! </h1>
-<hr>
-<h2>Current Projects</h2>
-<p><a href="https://HappyCha.in">HappyCha.in -- Blockchain 2.0 (Ethereum) based Infrastructure as an API</a></p>
-<p><a href="http://m.me/144000482774878">Comedy Bot -- Facebook Messenger Chatbot</a></p>
-<p><a href="http://youtalky.com">YouTalky.com -- Audio Search Engine.</a></p>
-<p><a href="http://tinyflights.com">TinyFlights.com -- A fare aggregator and travel metasearch engine platform for private charter flights</a></p>
-<p><a href="sms://+17203364682">SMS Chatbot: 720-336-4682 -- A SMS Chatbot built with AWS Lambda, Twilio and Node</a></p>
-<p><a href="http://howdoiprogram.com">HowDoIProgram.com -- Universal, language agnostic package manager and library</a></p>
-<hr>
-<h2>Community profiles</h2>
 <ul>
-    <!--<li><a href="http://itimmy.com">Portfolio</a></li>-->
-    <li><a href="http://itimmy.com/resume.pdf">Resume.pdf</a></li>
-    <li><a href="http://github.com/tcsiwula">Github</a></li>
-    <li><a href="http://linkedin.com/in/tcsiwula">Linkedin</a></li>
-    <li><a href="https://angel.co/tcsiwula">AngelList</a></li>
-    <li><a href="http://twitter.com/tcsiwula">Twitter</a></li>
+    <li><a href="https://HappyCha.in">HappyCha.in </a> -- Blockchain 2.0 (Ethereum) based Infrastructure as an API.
+    <li><a href="http://m.me/144000482774878">Comedy Bot</a> -- Facebook Messenger Chatbot.
+    <li><a href="http://youtalky.com">YouTalky.com</a> -- Audio Search Engine.
+    <li><a href="http://tinyflights.com">TinyFlights.com</a> -- A fare aggregator and travel metasearch engine platform for
+        private charter flights
+    <li><a href="sms://+17203364682">SMS Chatbot: 720-336-4682</a> -- A SMS Chatbot built with AWS Lambda, Twilio and
+        Node.
+    <li><a href="http://howdoiprogram.com">HowDoIProgram.com</a> -- Universal, language agnostic package manager and
+        library.
 </ul>
-<hr>
-<p>Thank you for visiting :) </p>
 
 <script>
     var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
@@ -57,132 +91,112 @@
     init();
     animate();
     function init() {
-        container = document.createElement( 'div' );
-        document.body.appendChild( container );
-        camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+        container = document.createElement('div');
+        document.body.appendChild(container);
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 2, 10000);
         camera.position.z = 1000;
         scene = new THREE.Scene();
         particles = new Array();
         var PI2 = Math.PI * 2;
-        var material = new THREE.SpriteCanvasMaterial( {
+        var material = new THREE.SpriteCanvasMaterial({
             color: 0xffffff,
-            program: function ( context ) {
+            program: function (context) {
                 context.beginPath();
-                context.arc( 0, 0, 0.5, 0, PI2, true );
+                context.arc(0, 0, 0.5, 0, PI2, true);
                 context.fill();
             }
-        } );
-
-
-
+        });
         var i = 0;
-        for ( var ix = 0; ix < AMOUNTX; ix ++ )
-        {
-            for ( var iy = 0; iy < AMOUNTY; iy ++ )
-            {
-                particle = particles[ i ++ ] = new THREE.Sprite( material );
+        for (var ix = 0; ix < AMOUNTX; ix++) {
+            for (var iy = 0; iy < AMOUNTY; iy++) {
+                particle = particles[i++] = new THREE.Sprite(material);
                 particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 );
-
-
-            // The default x to z 3D depth perception is ----> [iy * SEPARATION]
-            // x to x 2D perception is ----> [iy -10 * SEPARATION]
-            // x to x 3d perception is ----> [iy -10 * SEPARATION]
-            particle.position.z =
-
-
-                iy  * SEPARATION -
+                // The default x to z 3D depth perception is ----> [iy * SEPARATION]
+                // x to x 2D perception is ----> [iy -10 * SEPARATION]
+                // x to x 3d perception is ----> [iy -10 * SEPARATION]
+                particle.position.z =
+                    iy * SEPARATION -
                     ( ( AMOUNTY * SEPARATION ) / 2 );
-
-
-
-            scene.add( particle );
-
-
-
-
-
-
-
-
+                scene.add(particle);
             }
         }
         renderer = new THREE.CanvasRenderer();
-        renderer.setPixelRatio( window.devicePixelRatio );
-        renderer.setSize( window.innerWidth, window.innerHeight );
-        container.appendChild( renderer.domElement );
-        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-        document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-        document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-        //
-        window.addEventListener( 'resize', onWindowResize, false );
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        container.appendChild(renderer.domElement);
+        document.addEventListener('mousemove', onDocumentMouseMove, true);
+        document.addEventListener('touchstart', onDocumentTouchStart, true);
+        document.addEventListener('touchmove', onDocumentTouchMove, true);
+        window.addEventListener('resize', onWindowResize, false);
     }
     function onWindowResize() {
         windowHalfX = window.innerWidth / 2;
         windowHalfY = window.innerHeight / 2;
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
-        renderer.setSize( window.innerWidth, window.innerHeight );
+        renderer.setSize(window.innerWidth, window.innerHeight);
     }
-
-    function onDocumentMouseMove( event ) {
+    function onDocumentMouseMove(event) {
         mouseX = event.clientX - windowHalfX;
         mouseY = event.clientY - windowHalfY;
     }
-    function onDocumentTouchStart( event ) {
-        if ( event.touches.length === 1 ) {
+    function onDocumentTouchStart(event) {
+        if (event.touches.length === 1) {
             event.preventDefault();
-            mouseX = event.touches[ 0 ].pageX - windowHalfX;
-            mouseY = event.touches[ 0 ].pageY - windowHalfY;
+            mouseX = event.touches[0].pageX - windowHalfX;
+            mouseY = event.touches[0].pageY - windowHalfY;
         }
     }
-    function onDocumentTouchMove( event ) {
-        if ( event.touches.length === 1 ) {
+    function onDocumentTouchMove(event) {
+        if (event.touches.length === 1) {
             event.preventDefault();
-            mouseX = event.touches[ 0 ].pageX - windowHalfX;
-            mouseY = event.touches[ 0 ].pageY - windowHalfY;
+            mouseX = event.touches[0].pageX - windowHalfX;
+            mouseY = event.touches[0].pageY - windowHalfY;
         }
     }
-
     function animate() {
-        requestAnimationFrame( animate );
+        requestAnimationFrame(animate);
         render();
     }
-    function render()
-    {
+    function render() {
         camera.position.x = ( mouseX - camera.position.x ) * .05;
-        camera.position.y = ( - mouseY - camera.position.y ) * .05;
-        camera.lookAt( scene.position );
-
+        camera.position.y = ( -mouseY - camera.position.y ) * .05;
+        camera.lookAt(scene.position);
         var i = 0;
-        for ( var ix = 0; ix < AMOUNTX; ix ++ )
-        {
-            for ( var iy = 0; iy < AMOUNTY; iy ++ )
-            {
-                particle = particles[ i++ ];
-
+        for (var ix = 0; ix < AMOUNTX; ix++) {
+            for (var iy = 0; iy < AMOUNTY; iy++) {
+                particle = particles[i++];
                 particle.position.y = (
-                 -Math.sin(
-
-                    // speed --> slow == ( ix + count ) * 0.1 )
-                    // speed --> fast == ( ix + count ) * 0.5 )
-                    ( ix + count ) * 0.01 ) * 50 ) +
+                    -Math.sin(
+                        // speed --> slow == ( ix + count ) * 0.1 )
+                        // speed --> fast == ( ix + count ) * 0.5 )
+                        ( ix + count ) * 0.01) * 50 ) +
                     (-Math.sin(
-                            ( iy + count ) * 0.1 ) * 50 );
-
-                particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 4 +
-                        ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 4;
+                        ( iy + count ) * 0.1) * 50 );
+                particle.scale.x = particle.scale.y = ( Math.sin(( ix + count ) * 0.3) + 1 ) * 4 +
+                    ( Math.sin(( iy + count ) * 0.5) + 1 ) * 4;
             }
         }
-
-        renderer.render( scene, camera );
-        count += 0.4;
+        renderer.render(scene, camera);
+        count += 0.1;
     }
 </script>
-
 
 </body>
 
 <footer>
+    <h2>Community profiles</h2>
+    <ul>
+        <!--<li><a href="http://itimmy.com">Portfolio</a></li>-->
+        <li><a href="http://itimmy.com/resume.pdf">Resume.pdf</a></li>
+        <li><a href="http://github.com/tcsiwula">Github</a></li>
+        <li><a href="http://linkedin.com/in/tcsiwula">Linkedin</a></li>
+        <li><a href="https://angel.co/tcsiwula">AngelList</a></li>
+        <li><a href="http://twitter.com/tcsiwula">Twitter</a></li>
+    </ul>
+
+    <p>Thank you for visiting :) </p>
+
 
 </footer>
 

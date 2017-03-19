@@ -14,7 +14,6 @@ var date = new Date();
 var current_hour = date.getHours();
 app.use(serveIndex('/public'));
 app.use(express.static('public'));
-const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
 app.get('/', function (req, res) {
   res.send("Hello from /. The current time is: ", current_hour);
@@ -29,6 +28,11 @@ app.get('/m', function (req, res) {
 
 app.get('/tenx', function (req, res) {
   res.writeHead(301, {"Location": "https://github.com/jonrahoi/ten-x-chatbot"});
+  res.end();
+})
+
+app.get('/m', function (req, res) {
+  res.writeHead(301, {"Location": "https://www.youtube.com/playlist?list=PLMVXM3ivA2wAGEiEnbaWky3XQKT5w91d8"});
   res.end();
 })
 
