@@ -20,7 +20,6 @@ app.get('/', function (req, res) {
 })
 
 app.get('/m', function (req, res) {
-  getSelection()
   res.writeHead(301, {
     "Location": "https://www.youtube.com/watch?v=lsSC2vx7zFQ&t=5s&list=PLV4VhMOmOJk-pG_9wJUcDCha3LN3Ru6dz&index=1"
   });
@@ -28,10 +27,8 @@ app.get('/m', function (req, res) {
 })
 
 app.get('/e', function (req, res) {
-  getSelection()
   res.writeHead(301, {
-    "Location": "https://www.youtube.com/watch?v=oRj67HVCPAs&list=PLV4VhMOmOJk9HmLRXHPQezSGqUqpVt_jI"
-  });
+    "Location": "https://www.youtube.com/watch?v=oRj67HVCPAs&list=PLV4VhMOmOJk9HmLRXHPQezSGqUqpVt_jI"});
   res.end();
 })
 
