@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <style>
         * {
-            background: black;
             margin: 0;
             padding: 0;
             -webkit-overflow-scrolling: touch;
@@ -26,7 +25,6 @@
         }
 
         footer {
-            background: black;
             font-family: Times;
             color: greenyellow
         }
@@ -63,7 +61,7 @@
     <h3>Current Projects</h3>
 </head>
 
-<body>
+<body background="congruent_pentagon.png">
 
 <script src="build/three.js"></script>
 <script src="js/renderers/Projector.js"></script>
@@ -112,7 +110,6 @@
         particles = new Array();
         var PI2 = Math.PI * 2;
         var material = new THREE.SpriteCanvasMaterial({
-            color: 0xffffff,
             program: function (context) {
                 context.beginPath();
                 context.arc(0, 0, 0.5, 0, PI2, true);
@@ -197,7 +194,7 @@
 
 </body>
 
-<footer>
+<footer background="congruent_pentagon.png">
 
 
 </footer>
