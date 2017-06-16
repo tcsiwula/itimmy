@@ -27,6 +27,13 @@ app.get('/aws', function (req, res) {
   res.end();
 })
 
+app.get('/hc', function (req, res) {
+  res.writeHead(301, {
+    "Location": "https://github.com/tcsiwula/HappyChain"
+  });
+  res.end();
+})
+
 
 app.get('/m', function (req, res) {
   res.writeHead(301, {
