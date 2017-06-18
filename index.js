@@ -59,6 +59,11 @@ app.post('/resume', function (req, res) {
   res.end();
 })
 
+app.post('/transcript', function (req, res) {
+  res.writeHead(301, {"Location": "http://itimmy.com/transcript.pdf"});
+  res.end();
+})
+
 app.post('/resume1', function (req, res) {
   res.writeHead(301, {"Location": "http://itimmy.com/resume"});
   res.end();
