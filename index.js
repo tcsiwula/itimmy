@@ -49,10 +49,11 @@ app.get('/e', function (req, res) {
   res.end();
 })
 
-app.get('/whitepapers', function (req, res) {
-  res.writeHead(301, {"Location": "http://itimmy.com/whitepapers/"});
-  res.end();
-})
+// todo fix for rendering static folder of files.
+// app.get('/whitepapers', function (req, res) {
+//   res.writeHead(301, {"Location": "http://itimmy.com/whitepapers"});
+//   res.end();
+// })
 
 app.post('/resume', function (req, res) {
   res.writeHead(301, {"Location": "http://itimmy.com/resume.pdf"});
@@ -113,8 +114,8 @@ app.get('/messenger_chatbot', (req, res) => {
   res.end();
 });
 
-app.get('/chatbot', (req, res) => {
-  res.writeHead(301, {"Location": "https://www.facebook.com/Comedy-Bot-144000482774878/"});
+app.get('/comedybot', (req, res) => {
+  res.writeHead(301, {"Location": "http://m.me/144000482774878"});
   res.end();
 });
 
