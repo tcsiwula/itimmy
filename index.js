@@ -49,8 +49,8 @@ app.get('/e', function (req, res) {
   res.end();
 })
 
-app.get('/tenx', function (req, res) {
-  res.writeHead(301, {"Location": "https://github.com/jonrahoi/ten-x-chatbot"});
+app.get('/whitepapers', function (req, res) {
+  res.writeHead(301, {"Location": "http://itimmy.com/whitepapers/"});
   res.end();
 })
 
