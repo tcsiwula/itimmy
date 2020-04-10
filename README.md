@@ -1,6 +1,17 @@
 # itimmy
 itimmy-site
 
+
+```
+npm install
+npm run start
+
+open http://127.0.0.1:5000/
+
+```
+
+
+
 #deploy script
 bash deploy_script.sh
 
@@ -15,4 +26,3 @@ $ git push origin master
 ```sh
 $ git push heroku master
 ```
-
