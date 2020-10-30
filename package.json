@@ -9,10 +9,9 @@
   },
   "dependencies": {
     "body-parser": "latest",
-    "bower": "latest",
     "cheerio": "latest",
     "express": "latest",
-    "express-generator": "latest",
+    "express-generator": "^4.2.0",
     "fs": "latest",
     "grunt-cli": "latest",
     "gulp": "latest",
@@ -20,7 +19,7 @@
     "lame": "latest",
     "node-sass": "latest",
     "nodemon": "latest",
-    "npm": "latest",
+    "npm": "^7.0.6",
     "open": "latest",
     "pg": "latest",
     "pg-promise": "latest",
@@ -39,7 +38,7 @@
   "author": "Tim Siwula <tcsiwula@gmail.com> (http://www.itimmy.com)",
   "license": "MIT",
   "devDependencies": {
-    "budo": "^9.4.7",
+    "budo": "^11.6.4",
     "express": "^4.15.0",
     "watchify": "^3.9.0"
   }
